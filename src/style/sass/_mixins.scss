@@ -1,0 +1,131 @@
+
+
+@mixin flex($align, $justify, $direction) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
+
+@mixin custom-grid($min-width, $gap) {
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  display: grid;
+  gap: $gap;
+}
+@mixin grid($min-width, $fr1, $min-width2, $fr2, $gap) {
+  grid-template-columns: minmax($min-width, $fr1) minmax($min-width2, $fr2);
+  display: grid;
+  gap: $gap;
+}
+
+@mixin grid-item($span: 1, $start: auto, $end: auto) {
+  grid-column: $start / span $span / $end;
+}
+
+@mixin transition($time, $motion) {
+  transition: all $time $motion;
+}
+
+@mixin animate(
+  $time,
+  $motion,
+  $delay,
+  $count,
+  $direction,
+  $fillmode,
+  $state,
+  $name
+) {
+  animation: $time $motion $delay $count $direction $fillmode $state $name;
+}
+
+// To absolute center any element w.r.t viewport
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// To disable Scroll bar
+@mixin disableScroll {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+}
+
+// Mobile Responsivness Breakpoints
+@mixin media-xss {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin media-ss {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media screen and (max-width: 395px) {
+    @content;
+  }
+}
+
+@mixin media-sl {
+  @media screen and (max-width: 560px) {
+    @content;
+  }
+}
+@mixin media-msl {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
+@mixin media-xsl {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (max-width: 846px) {
+    @content;
+  }
+}
+@mixin media-xmd {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-ml {
+  @media screen and (max-width: 1112px) {
+    @content;
+  }
+}
+@mixin media-xml {
+  @media screen and (max-width: 1220px) {
+    @content;
+  }
+}
+
+@mixin media-l {
+  @media screen and (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin media-xxl {
+  @media screen and (max-width: 1920px) {
+    @content;
+  }
+}
