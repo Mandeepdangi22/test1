@@ -345,7 +345,6 @@
 .weight-500 {
   font-weight: 500 !important;
 }
-
 .weight-600 {
   font-weight: 600 !important;
 }
@@ -353,8 +352,7 @@
   font-weight: 700 !important;
 }
 
-
-
+//responsiveness these classes are in mixins
 @include media-xl {
 
   .body-text-1 {
@@ -367,7 +365,6 @@
     font-size: 1.4rem;
   }
 }
-
 @include media-l {
 
   .body-text-1 {
@@ -380,7 +377,6 @@
     font-size: 1.2rem;
   }
 }
-
 @include media-xml {
  
   .body-text-1 {
@@ -407,7 +403,6 @@
     font-size: 1.2rem;
   }
 }
-
 @include media-md {
   .button-content {
     font-family: $main_font;
@@ -430,7 +425,6 @@
     }
   }
 }
-
 @include media-xsl {
   .body-text-2 {
     font-size: 1.1rem;
